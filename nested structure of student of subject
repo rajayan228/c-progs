@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+struct subject
+{  
+  char sub1[20];
+  char sub2[20];
+};
+struct student
+{
+    int rno;
+    char nm[20];
+    subject a;
+};
+int main(){
+    struct student s[3];
+    for(int i=0;i<3;i++){
+        cout<<"enter roll no:";
+        cin>>s[i].rno;
+        cout<<"enter name:";
+        cin>>s[i].nm;
+        cout<<"enter subject1:";
+        cin>>s[i].a.sub1;
+        cout<<"enter subject2:";
+        cin>>s[i].a.sub2;
+    
+        cout<<s[i].rno<<endl<<s[i].nm<<endl<<s[i].a.sub1<<endl<<s[i].a.sub2<<endl;
+    }
+return 0;
+}
