@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+struct account
+{  
+  int accno,bal;
+};
+struct person
+{
+    char nm[20];
+    account a;
+};
+int main(){
+    struct person p1;
+    cout<<"enter name:";
+    cin>>p1.nm;
+    cout<<"enter account no:";
+    cin>>p1.a.accno;
+    cout<<"enter balance:";
+    cin>>p1.a.bal;
+    cout<<p1.nm<<endl<<p1.a.accno<<endl<<p1.a.bal;
+return 0;
+}
