@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+struct address
+{ int hno;
+  char city[20];
+  int pincode;
+};
+struct employee
+{
+    int id;
+    char nm[20];
+    address d;
+};
+int main(){
+    struct employee s1;
+    cout<<"enter id:"<<endl;
+    cin>>s1.id;
+    cout<<"enter name:"<<endl;
+    cin>>s1.nm;
+    cout<<"enter address:"<<endl;
+    cin>>s1.d.hno>>s1.d.city>>s1.d.pincode;
+    cout<<s1.id<<s1.nm<<s1.d.hno<<s1.d.city<<s1.d.pincode;
+return 0;
+}
