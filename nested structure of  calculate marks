@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+struct marks
+{  
+  int maths,science,english,total;
+};
+struct student
+{
+    int rno;
+    char nm[20];
+    marks m;
+};
+int main(){
+    struct student s1;
+    cout<<"enter roll no:"<<endl;
+    cin>>s1.rno;
+    cout<<"enter name:"<<endl;
+    cin>>s1.nm;
+    cout<<"enter marks maths:"<<endl<<"enter marks science:"<<endl<<"enter marks english:"<<endl;
+    cin>>s1.m.maths>>s1.m.science>>s1.m.english;
+    cout<<"total marks:"<<endl;
+    s1.m.total=s1.m.maths+s1.m.science+s1.m.english;
+    cout<<s1.rno<<" "<<s1.nm<<" "<<s1.m.maths<<" "<<s1.m.science<<" "<<s1.m.english<<endl<<s1.m.total;
+return 0;
+}
