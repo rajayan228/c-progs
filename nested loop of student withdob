@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+struct name
+{ char fnm[20];
+  char mnm[20];
+  char lnm[20];
+};
+struct dob
+{
+    int date;
+    char month[20];
+    int year;
+};
+struct student
+{
+    int rno;
+    int marks;
+    name nm;
+    dob d;
+};
+int main(){
+    struct student s1;
+    cout<<"enter rollno:"<<endl;
+    cin>>s1.rno;
+    cout<<"enter marks:"<<endl;
+    cin>>s1.marks;
+    cout<<"enter name:"<<endl;
+    cin>>s1.nm.fnm>>s1.nm.mnm>>s1.nm.lnm;
+    cout<<"enter dob:"<<endl;
+    cin>>s1.d.date>>s1.d.month>>s1.d.year;
+    cout<<s1.rno<<s1.marks<<s1.nm.fnm<<s1.nm.mnm<<s1.nm.lnm<<s1.d.date<<s1.d.month<<s1.d.year;
+return 0;
+}
+    
+
+
