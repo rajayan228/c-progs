@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+struct author
+{  
+  char fnm[20];
+  char lnm[20];
+  int age;
+};
+struct book
+{
+    int price;
+    char title[20];
+    author d;
+};
+int main(){
+    struct book s1;
+    cout<<"enter price:"<<endl;
+    cin>>s1.price;
+    cout<<"enter title:"<<endl;
+    cin>>s1.title;
+    cout<<"enter author name:"<<endl;
+    cin>>s1.d.fnm>>s1.d.lnm;
+    cout<<"enter age of author:"<<endl;
+    cin>>s1.d.age;
+    cout<<s1.price<<" "<<s1.title<<" "<<s1.d.fnm<<" "<<s1.d.lnm<<" "<<s1.d.age;
+return 0;
+}
