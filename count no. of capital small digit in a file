@@ -1,0 +1,24 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    ifstream fin("story.txt");
+    if(!fin){
+        cout<<"file does not exist"<<endl;
+    }
+    int capital=0,small=0,digit=0;
+    char ch;
+    while(fin.get(ch)){
+        if(ch>='a'&&ch<='z'){
+        small++;
+        }
+        else if(ch>='A'&&ch<='Z'){
+            capital++;
+        }
+        else if(ch>=0&&ch<=9){
+            digit++;
+        }
+        }
+        cout<<"total small="<<small<<endl<<"total capital="<<capital<<endl<<"total digit="<<digit<<endl;
+        return 0;
+    }
