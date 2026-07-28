@@ -1,0 +1,22 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    ifstream fin("story.txt");
+    if(!fin){
+        cout<<"file does not exist"<<endl;
+    }
+    int count1=0,count2=0;
+    char ch;
+    while(fin.get(ch)){
+        if(ch>='a'&&ch<='m'){
+        count1++;
+        }
+        else if(ch>='n'&&ch<='z'){
+            count2++;
+        }
+        
+        }
+        cout<<"total a to n= "<<count1<<endl<<"total m to z= "<<count2<<endl;
+        return 0;
+    }
